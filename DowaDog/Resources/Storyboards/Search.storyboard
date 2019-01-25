@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aV8-vJ-XzJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareBold.ttf">
+            <string>NanumSquareB</string>
+        </array>
+        <array key="NanumSquareExtraBold.ttf">
+            <string>NanumSquareEB</string>
+        </array>
+        <array key="NanumSquareLight.ttf">
+            <string>NanumSquareL</string>
+        </array>
+        <array key="NanumSquareRegular.ttf">
+            <string>NanumSquareR</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="HZ1-Xe-JzX">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="Jed-gK-HFD" customClass="SearchVC" customModule="DowaDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mwx-Av-nyK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfm-Jj-Nwj">
+                                <rect key="frame" x="27" y="80" width="195" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="QYw-hc-liX"/>
+                                    <constraint firstAttribute="width" constant="195" id="cDe-2U-GgB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무엇을 찾으시나요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDp-K6-IaC">
+                                <rect key="frame" x="27" y="121" width="201" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="VaH-ax-UYc"/>
+                                    <constraint firstAttribute="height" constant="27" id="tNR-OM-Swb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareL" family="NanumSquare" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDy-fe-Afi" customClass="SearchBarView" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="47"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="키워드를 검색하세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKV-wz-qPG">
+                                        <rect key="frame" x="20" y="10" width="277" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="QQN-l3-CJt"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-fB-rvm">
+                                        <rect key="frame" x="305" y="13" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="PVr-zH-dwy"/>
+                                            <constraint firstAttribute="width" constant="21" id="olO-Ph-cUM"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Bea-AJ-fsg"/>
+                                    <constraint firstItem="DPy-fB-rvm" firstAttribute="leading" secondItem="eKV-wz-qPG" secondAttribute="trailing" constant="8" id="IHQ-TZ-e84"/>
+                                    <constraint firstItem="eKV-wz-qPG" firstAttribute="top" secondItem="yDy-fe-Afi" secondAttribute="top" constant="10" id="Idv-WH-4xt"/>
+                                    <constraint firstItem="eKV-wz-qPG" firstAttribute="leading" secondItem="yDy-fe-Afi" secondAttribute="leading" constant="20" id="Tdd-Po-Doi"/>
+                                    <constraint firstItem="DPy-fB-rvm" firstAttribute="top" secondItem="yDy-fe-Afi" secondAttribute="top" constant="13" id="ZOC-Pw-Hee"/>
+                                    <constraint firstAttribute="bottom" secondItem="eKV-wz-qPG" secondAttribute="bottom" constant="10" id="r6d-gu-g5G"/>
+                                    <constraint firstAttribute="bottom" secondItem="DPy-fB-rvm" secondAttribute="bottom" constant="13" id="tqM-Ta-bsy"/>
+                                    <constraint firstAttribute="trailing" secondItem="DPy-fB-rvm" secondAttribute="trailing" constant="17" id="vn8-uj-rDm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 키워드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g5-XA-wPH">
+                                <rect key="frame" x="28" y="255" width="77" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="2TB-HJ-RzF"/>
+                                    <constraint firstAttribute="width" constant="77" id="NTh-1L-mm5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS7-K3-iGS" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="28" y="291" width="85" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="NRu-7T-mfr"/>
+                                    <constraint firstAttribute="width" constant="85" id="gEo-Lc-wuw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 대형견">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpQ-pS-9KL" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="124" y="291" width="109" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="Dgw-Rz-ybL"/>
+                                    <constraint firstAttribute="height" constant="33" id="JL3-KI-ACF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 시설보호소">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdZ-On-vnq" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="243" y="291" width="104" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="3i0-XE-Nc2"/>
+                                    <constraint firstAttribute="width" constant="104" id="nNh-fa-x1b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 동물병원">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phd-r9-Uaw" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="28" y="331" width="109" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="2nv-LW-u5J"/>
+                                    <constraint firstAttribute="width" constant="109" id="Tpr-io-fyh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 수도권지역">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7O-hi-Gtk" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="145" y="331" width="85" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="7wF-Dc-CNf"/>
+                                    <constraint firstAttribute="width" constant="85" id="dRy-H1-Ufk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 소형견">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGb-ag-vkc" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="238" y="331" width="109" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="JDo-8M-oOm"/>
+                                    <constraint firstAttribute="width" constant="109" id="Mbb-bG-5fu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 공공보호소">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-pr-BPY" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="28" y="371" width="109" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="EVd-73-Bsw"/>
+                                    <constraint firstAttribute="height" constant="33" id="beR-b0-EOH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 케어입양센터">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThV-p2-noi" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="148" y="371" width="104" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="7o9-sa-ocR"/>
+                                    <constraint firstAttribute="height" constant="33" id="GQZ-nK-vDc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 서울지역">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azl-4T-fNN" customClass="keywordButton" customModule="DowaDog" customModuleProvider="target">
+                                <rect key="frame" x="262" y="371" width="85" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="PGE-zJ-0Ix"/>
+                                    <constraint firstAttribute="width" constant="85" id="TnP-rg-1Xp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                <state key="normal" title="# 중형견">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNp-Th-QFv">
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QNp-Th-QFv" secondAttribute="height" multiplier="375:56" id="YhE-eN-6yF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareEB" family="NanumSquare" pointSize="18"/>
+                                <state key="normal" title="검색">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchBtnAction:" destination="Jed-gK-HFD" eventType="touchUpInside" id="wpl-u4-rOP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GLN-rT-PEG" firstAttribute="trailing" secondItem="yDy-fe-Afi" secondAttribute="trailing" constant="16" id="2o2-Tl-eAx"/>
+                            <constraint firstItem="azl-4T-fNN" firstAttribute="top" secondItem="vGb-ag-vkc" secondAttribute="bottom" constant="7" id="4IM-fT-uZM"/>
+                            <constraint firstItem="GLN-rT-PEG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MdZ-On-vnq" secondAttribute="trailing" constant="28" id="61u-iz-nSV"/>
+                            <constraint firstItem="vGb-ag-vkc" firstAttribute="leading" secondItem="j7O-hi-Gtk" secondAttribute="trailing" constant="8" id="AFZ-N4-wiF"/>
+                            <constraint firstItem="MdZ-On-vnq" firstAttribute="leading" secondItem="gpQ-pS-9KL" secondAttribute="trailing" constant="10" id="AZ0-ek-OnO"/>
+                            <constraint firstItem="vGb-ag-vkc" firstAttribute="top" secondItem="MdZ-On-vnq" secondAttribute="bottom" constant="7" id="BTN-m9-5bW"/>
+                            <constraint firstItem="j7O-hi-Gtk" firstAttribute="leading" secondItem="Phd-r9-Uaw" secondAttribute="trailing" constant="8" id="Cvy-lz-Lny"/>
+                            <constraint firstItem="QDp-K6-IaC" firstAttribute="leading" secondItem="GLN-rT-PEG" secondAttribute="leading" constant="27" id="HPf-fG-xRG"/>
+                            <constraint firstItem="GLN-rT-PEG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="azl-4T-fNN" secondAttribute="trailing" constant="28" id="JTP-AS-jrj"/>
+                            <constraint firstItem="ThV-p2-noi" firstAttribute="leading" secondItem="B1V-pr-BPY" secondAttribute="trailing" constant="11" id="Kvy-Rc-VsY"/>
+                            <constraint firstItem="Jfm-Jj-Nwj" firstAttribute="top" secondItem="GLN-rT-PEG" secondAttribute="top" constant="16" id="VOX-yn-tyh"/>
+                            <constraint firstItem="B1V-pr-BPY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GLN-rT-PEG" secondAttribute="leading" constant="28" id="YDb-bB-P3x"/>
+                            <constraint firstItem="hS7-K3-iGS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GLN-rT-PEG" secondAttribute="leading" constant="28" id="Ydb-D6-sen"/>
+                            <constraint firstItem="yDy-fe-Afi" firstAttribute="top" secondItem="QDp-K6-IaC" secondAttribute="bottom" constant="14" id="Zrf-pJ-goG"/>
+                            <constraint firstItem="Phd-r9-Uaw" firstAttribute="top" secondItem="hS7-K3-iGS" secondAttribute="bottom" constant="7" id="adP-15-af8"/>
+                            <constraint firstItem="Jfm-Jj-Nwj" firstAttribute="leading" secondItem="GLN-rT-PEG" secondAttribute="leading" constant="27" id="bMU-Gc-0Y8"/>
+                            <constraint firstItem="azl-4T-fNN" firstAttribute="leading" secondItem="ThV-p2-noi" secondAttribute="trailing" constant="10" id="dh0-kp-2VE"/>
+                            <constraint firstItem="QDp-K6-IaC" firstAttribute="top" secondItem="Jfm-Jj-Nwj" secondAttribute="bottom" constant="14" id="gci-JN-u9k"/>
+                            <constraint firstItem="j7O-hi-Gtk" firstAttribute="centerX" secondItem="GLN-rT-PEG" secondAttribute="centerX" id="h8f-DW-WnB"/>
+                            <constraint firstItem="7g5-XA-wPH" firstAttribute="leading" secondItem="GLN-rT-PEG" secondAttribute="leading" constant="28" id="id4-Hd-FRJ"/>
+                            <constraint firstItem="QNp-Th-QFv" firstAttribute="leading" secondItem="GLN-rT-PEG" secondAttribute="leading" id="mp3-pS-RhL"/>
+                            <constraint firstItem="MdZ-On-vnq" firstAttribute="top" secondItem="7g5-XA-wPH" secondAttribute="bottom" constant="18" id="nNs-JU-zGd"/>
+                            <constraint firstItem="7g5-XA-wPH" firstAttribute="top" secondItem="yDy-fe-Afi" secondAttribute="bottom" constant="46" id="oN9-Gd-v5h"/>
+                            <constraint firstItem="GLN-rT-PEG" firstAttribute="bottom" secondItem="QNp-Th-QFv" secondAttribute="bottom" id="oca-Bp-hAY"/>
+                            <constraint firstItem="gpQ-pS-9KL" firstAttribute="top" secondItem="7g5-XA-wPH" secondAttribute="bottom" constant="18" id="qSp-aH-FdB"/>
+                            <constraint firstItem="B1V-pr-BPY" firstAttribute="top" secondItem="Phd-r9-Uaw" secondAttribute="bottom" constant="7" id="rWZ-kF-UzE"/>
+                            <constraint firstItem="hS7-K3-iGS" firstAttribute="top" secondItem="7g5-XA-wPH" secondAttribute="bottom" constant="18" id="sfw-2q-BaY"/>
+                            <constraint firstItem="j7O-hi-Gtk" firstAttribute="top" secondItem="gpQ-pS-9KL" secondAttribute="bottom" constant="7" id="xyG-Xv-fjG"/>
+                            <constraint firstItem="ThV-p2-noi" firstAttribute="top" secondItem="j7O-hi-Gtk" secondAttribute="bottom" constant="7" id="ydo-1p-Dc3"/>
+                            <constraint firstItem="GLN-rT-PEG" firstAttribute="trailing" secondItem="QNp-Th-QFv" secondAttribute="trailing" id="zGr-3i-PP7"/>
+                            <constraint firstItem="gpQ-pS-9KL" firstAttribute="leading" secondItem="hS7-K3-iGS" secondAttribute="trailing" constant="11" id="zOj-qZ-FHb"/>
+                            <constraint firstItem="yDy-fe-Afi" firstAttribute="leading" secondItem="GLN-rT-PEG" secondAttribute="leading" constant="16" id="zU2-Xk-3pr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GLN-rT-PEG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1v9-Lm-25v">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backBtn" id="nwA-e6-RV9">
+                            <color key="tintColor" red="0.43529411759999997" green="0.43921568630000002" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="unwind:" destination="Jed-gK-HFD" id="VWL-Tc-EDI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="constraint" destination="oN9-Gd-v5h" id="xe2-kS-00K"/>
+                        <outlet property="keywordBtn1" destination="hS7-K3-iGS" id="q0s-Mg-HMd"/>
+                        <outlet property="keywordBtn2" destination="gpQ-pS-9KL" id="djb-nO-day"/>
+                        <outlet property="keywordBtn3" destination="MdZ-On-vnq" id="y8y-j5-HPo"/>
+                        <outlet property="keywordBtn4" destination="Phd-r9-Uaw" id="Qpq-K3-IPo"/>
+                        <outlet property="keywordBtn5" destination="j7O-hi-Gtk" id="yhk-eJ-iCp"/>
+                        <outlet property="keywordBtn6" destination="vGb-ag-vkc" id="2QQ-kP-pcd"/>
+                        <outlet property="keywordBtn7" destination="B1V-pr-BPY" id="FQP-us-zzE"/>
+                        <outlet property="keywordBtn8" destination="ThV-p2-noi" id="p5m-EW-Ohr"/>
+                        <outlet property="keywordBtn9" destination="azl-4T-fNN" id="LbN-kX-2Pt"/>
+                        <outlet property="searchBtn" destination="QNp-Th-QFv" id="y9h-wQ-SSI"/>
+                        <outlet property="searchBtnConstraint" destination="oca-Bp-hAY" id="oZJ-xO-nOW"/>
+                        <outlet property="searchTF" destination="eKV-wz-qPG" id="gVf-NX-HH7"/>
+                        <outlet property="userName" destination="Jfm-Jj-Nwj" id="EbT-zZ-B5j"/>
+                        <segue destination="HAM-Nn-BOh" kind="show" identifier="goNoResult" id="7fc-H8-bmy"/>
+                        <segue destination="PnH-eP-WF9" kind="show" identifier="goResult" id="MpC-Ey-7iy"/>
+                        <segue destination="PkT-s9-qiZ" kind="unwind" identifier="unwind" unwindAction="unwindAction:" id="gFl-8F-M7w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ww9-nH-yU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PkT-s9-qiZ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1455.2" y="41.829085457271368"/>
+        </scene>
+        <!--No ResultVC-->
+        <scene sceneID="4DR-WK-Ipe">
+            <objects>
+                <viewController storyboardIdentifier="NoResultVC" id="HAM-Nn-BOh" customClass="NoResultVC" customModule="DowaDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="11F-Yf-G0D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchImg" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-hR-TV2">
+                                <rect key="frame" x="92" y="191" width="191" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cc2-hR-TV2" secondAttribute="height" multiplier="1:1" id="hNf-Ha-Mjt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과가 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gma-cb-h0I">
+                                <rect key="frame" x="116" y="404" width="143" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="HKu-Ce-WQu"/>
+                                    <constraint firstAttribute="width" constant="143" id="rWJ-rw-kXq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다시 검색해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXp-D2-Wmw">
+                                <rect key="frame" x="116" y="430" width="143" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="7Pz-Jl-w3d"/>
+                                    <constraint firstAttribute="height" constant="18" id="hJ6-kN-XAF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cc2-hR-TV2" firstAttribute="centerX" secondItem="1bZ-Hx-h8g" secondAttribute="centerX" id="2iH-sf-gV9"/>
+                            <constraint firstItem="Gma-cb-h0I" firstAttribute="top" secondItem="cc2-hR-TV2" secondAttribute="bottom" constant="22" id="3D7-gO-s3r"/>
+                            <constraint firstItem="IXp-D2-Wmw" firstAttribute="top" secondItem="Gma-cb-h0I" secondAttribute="bottom" constant="8" id="OJJ-TO-a3W"/>
+                            <constraint firstItem="IXp-D2-Wmw" firstAttribute="centerX" secondItem="1bZ-Hx-h8g" secondAttribute="centerX" id="b3p-fV-Dwb"/>
+                            <constraint firstItem="cc2-hR-TV2" firstAttribute="top" secondItem="1bZ-Hx-h8g" secondAttribute="top" constant="127" id="c64-hL-RDs"/>
+                            <constraint firstItem="Gma-cb-h0I" firstAttribute="centerX" secondItem="1bZ-Hx-h8g" secondAttribute="centerX" id="lej-Hw-Kyh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1bZ-Hx-h8g"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMQ-oe-N5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2324" y="418.74062968515744"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bnB-8o-LTH">
+            <objects>
+                <navigationController storyboardIdentifier="SearchNav" automaticallyAdjustsScrollViewInsets="NO" id="aV8-vJ-XzJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sgl-Nl-tOS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="16"/>
+                            <color key="textColor" red="0.28235294119999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jed-gK-HFD" kind="relationship" relationship="rootViewController" id="sIL-Bh-aFk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0N-V9-avJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="41.829085457271368"/>
+        </scene>
+        <!--Search ResultVC-->
+        <scene sceneID="euI-uA-t03">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultVC" id="PnH-eP-WF9" customClass="SearchResultVC" customModule="DowaDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oj3-Sn-r0q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cL3-VP-pYb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="eob-nO-AFC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="565" id="oDp-84-VOj"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="13" id="urF-oD-aUM">
+                                    <size key="itemSize" width="165" height="185"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="4" maxX="16" maxY="14"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="emergenCell" id="QGI-3F-iuv" customClass="EmergenDetailCVCell" customModule="DowaDog" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="4" width="165" height="185"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="185"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1p-tM-pHW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="185"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyZ-im-a0f">
+                                                            <rect key="frame" x="6" y="162" width="149" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="Cgw-92-gKq"/>
+                                                                <constraint firstAttribute="width" constant="149" id="U5o-gR-cyZ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="NanumSquareR" family="NanumSquare" pointSize="14"/>
+                                                            <color key="textColor" red="0.26277512310000001" green="0.26267054680000002" blue="0.26666760439999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5KV-ay-lHF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="165" height="132"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="5KV-ay-lHF" secondAttribute="height" multiplier="5:4" id="o48-L3-rNf"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9K-rM-SY5">
+                                                            <rect key="frame" x="10" y="9" width="35" height="19"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-dd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aA-b2-nV0">
+                                                                    <rect key="frame" x="4" y="3.5" width="27" height="12"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="12" id="OcA-y7-Zr0"/>
+                                                                        <constraint firstAttribute="width" constant="27" id="inu-eo-w6Z"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="NanumSquareB" family="NanumSquare" pointSize="11"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.96217399839999995" green="0.76967495679999998" blue="0.32536458969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="19" id="DAP-Cq-LKM"/>
+                                                                <constraint firstAttribute="width" constant="35" id="JcH-SP-FyP"/>
+                                                                <constraint firstItem="0aA-b2-nV0" firstAttribute="centerX" secondItem="U9K-rM-SY5" secondAttribute="centerX" id="Miy-Gx-v7C"/>
+                                                                <constraint firstItem="0aA-b2-nV0" firstAttribute="centerY" secondItem="U9K-rM-SY5" secondAttribute="centerY" id="Vix-Ja-Vl8"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogIcon1227" translatesAutoresizingMaskIntoConstraints="NO" id="h65-JY-wne">
+                                                            <rect key="frame" x="110" y="138.5" width="18" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="15k-WW-ULu"/>
+                                                                <constraint firstAttribute="width" constant="18" id="urs-7z-qay"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manIcon1227" translatesAutoresizingMaskIntoConstraints="NO" id="rld-jc-4dg">
+                                                            <rect key="frame" x="139" y="139" width="14" height="14"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14" id="1bE-KT-vJE"/>
+                                                                <constraint firstAttribute="width" constant="14" id="sae-Rh-Jxm"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmi-JB-sqp">
+                                                            <rect key="frame" x="7" y="137" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="4rk-Yy-Rx7"/>
+                                                                <constraint firstAttribute="width" constant="22" id="xKt-ey-w25"/>
+                                                            </constraints>
+                                                            <state key="normal" image="heartBtn"/>
+                                                            <connections>
+                                                                <action selector="heartClickAction:" destination="QGI-3F-iuv" eventType="touchUpInside" id="Ue0-pO-CFb"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="5KV-ay-lHF" firstAttribute="leading" secondItem="f1p-tM-pHW" secondAttribute="leading" id="6Uq-RZ-qZS"/>
+                                                        <constraint firstItem="h65-JY-wne" firstAttribute="centerY" secondItem="rld-jc-4dg" secondAttribute="centerY" id="6qy-f1-52w"/>
+                                                        <constraint firstItem="Pmi-JB-sqp" firstAttribute="leading" secondItem="f1p-tM-pHW" secondAttribute="leading" constant="7" id="9PT-N0-a6C"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rld-jc-4dg" secondAttribute="trailing" constant="12" id="BXq-YH-HQa"/>
+                                                        <constraint firstItem="Pmi-JB-sqp" firstAttribute="top" secondItem="5KV-ay-lHF" secondAttribute="bottom" constant="5" id="GGI-KO-F8y"/>
+                                                        <constraint firstItem="5KV-ay-lHF" firstAttribute="top" secondItem="f1p-tM-pHW" secondAttribute="top" id="J8L-31-0b3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iyZ-im-a0f" secondAttribute="trailing" constant="10" id="bGI-gq-ucw"/>
+                                                        <constraint firstItem="U9K-rM-SY5" firstAttribute="leading" secondItem="f1p-tM-pHW" secondAttribute="leading" constant="10" id="ckp-pw-Keo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="iyZ-im-a0f" secondAttribute="bottom" constant="7" id="kUq-y8-mCa"/>
+                                                        <constraint firstItem="rld-jc-4dg" firstAttribute="top" secondItem="5KV-ay-lHF" secondAttribute="bottom" constant="7" id="l8E-Nt-5JD"/>
+                                                        <constraint firstItem="rld-jc-4dg" firstAttribute="leading" secondItem="h65-JY-wne" secondAttribute="trailing" constant="11" id="lse-gp-aBv"/>
+                                                        <constraint firstItem="U9K-rM-SY5" firstAttribute="top" secondItem="f1p-tM-pHW" secondAttribute="top" constant="9" id="o2y-FY-vsf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5KV-ay-lHF" secondAttribute="trailing" id="qu4-Bw-Ner"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="f1p-tM-pHW" secondAttribute="trailing" id="9Zy-42-KV7"/>
+                                            <constraint firstItem="f1p-tM-pHW" firstAttribute="top" secondItem="QGI-3F-iuv" secondAttribute="top" id="Hxf-99-9xe"/>
+                                            <constraint firstAttribute="bottom" secondItem="f1p-tM-pHW" secondAttribute="bottom" id="Nxd-pS-g9N"/>
+                                            <constraint firstItem="f1p-tM-pHW" firstAttribute="leading" secondItem="QGI-3F-iuv" secondAttribute="leading" id="idi-U6-ldr"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="aboutLabel" destination="iyZ-im-a0f" id="xUM-sO-4Um"/>
+                                            <outlet property="animalImage" destination="5KV-ay-lHF" id="TvO-V8-ISX"/>
+                                            <outlet property="backView" destination="f1p-tM-pHW" id="vHc-SI-IwP"/>
+                                            <outlet property="dayLabel" destination="0aA-b2-nV0" id="MSD-hJ-jHl"/>
+                                            <outlet property="dayView" destination="U9K-rM-SY5" id="u8P-FR-Q6L"/>
+                                            <outlet property="heartBtn" destination="Pmi-JB-sqp" id="diJ-iv-h2D"/>
+                                            <outlet property="kindImage" destination="h65-JY-wne" id="5lH-6M-bCE"/>
+                                            <outlet property="sexImage" destination="rld-jc-4dg" id="Gyd-0g-djt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cL3-VP-pYb" firstAttribute="bottom" secondItem="ydk-GP-iPC" secondAttribute="bottom" id="JRl-7h-US5"/>
+                            <constraint firstItem="cL3-VP-pYb" firstAttribute="leading" secondItem="ydk-GP-iPC" secondAttribute="leading" id="K1W-dP-dLP"/>
+                            <constraint firstItem="cL3-VP-pYb" firstAttribute="top" secondItem="ydk-GP-iPC" secondAttribute="top" id="S0z-ek-sMC"/>
+                            <constraint firstItem="cL3-VP-pYb" firstAttribute="bottom" secondItem="ydk-GP-iPC" secondAttribute="bottom" id="TSF-i6-lVE"/>
+                            <constraint firstItem="cL3-VP-pYb" firstAttribute="leading" secondItem="ydk-GP-iPC" secondAttribute="leading" id="ZU5-ZJ-ldh"/>
+                            <constraint firstItem="cL3-VP-pYb" firstAttribute="trailing" secondItem="ydk-GP-iPC" secondAttribute="trailing" id="mYl-vB-fnF"/>
+                            <constraint firstItem="cL3-VP-pYb" firstAttribute="trailing" secondItem="ydk-GP-iPC" secondAttribute="trailing" id="uae-h0-3cb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ydk-GP-iPC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ibi-GJ-GLT"/>
+                    <connections>
+                        <outlet property="collectionView" destination="cL3-VP-pYb" id="MWb-SG-rdM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JnB-Ms-arP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2324" y="-403"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backBtn" width="12" height="24"/>
+        <image name="dogIcon1227" width="18" height="15"/>
+        <image name="heartBtn" width="14" height="13.5"/>
+        <image name="manIcon1227" width="14" height="14"/>
+        <image name="searchIcon" width="21" height="21"/>
+        <image name="searchImg" width="190" height="191"/>
+    </resources>
+</document>

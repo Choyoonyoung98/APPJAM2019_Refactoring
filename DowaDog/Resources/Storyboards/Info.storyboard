@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--InfoVC-->
+        <scene sceneID="F60-bU-IlV">
+            <objects>
+                <viewController id="LM1-jf-fGu" customClass="InfoVC" customModule="DowaDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlU-is-gyX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1275"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwp-PI-U4x">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1211"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACk-s2-Ixg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1211"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="serviceInformationImg" translatesAutoresizingMaskIntoConstraints="NO" id="qwF-BK-M3N">
+                                                <rect key="frame" x="0.0" y="16" width="375" height="1195"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qwF-BK-M3N" secondAttribute="height" multiplier="75:239" id="WTu-ia-efR"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ACk-s2-Ixg" secondAttribute="height" multiplier="375:1211" id="1Gp-ea-Yop"/>
+                                            <constraint firstAttribute="trailing" secondItem="qwF-BK-M3N" secondAttribute="trailing" id="6vg-pP-StT"/>
+                                            <constraint firstItem="qwF-BK-M3N" firstAttribute="leading" secondItem="ACk-s2-Ixg" secondAttribute="leading" id="O3p-tt-C3n"/>
+                                            <constraint firstItem="qwF-BK-M3N" firstAttribute="top" secondItem="ACk-s2-Ixg" secondAttribute="top" constant="16" id="TnS-XI-80Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="qwF-BK-M3N" secondAttribute="bottom" id="l1H-h7-t9H"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ACk-s2-Ixg" firstAttribute="width" secondItem="gwp-PI-U4x" secondAttribute="width" id="2Ms-pT-rqa"/>
+                                    <constraint firstItem="ACk-s2-Ixg" firstAttribute="leading" secondItem="gwp-PI-U4x" secondAttribute="leading" id="C17-Cr-RdM"/>
+                                    <constraint firstAttribute="bottom" secondItem="ACk-s2-Ixg" secondAttribute="bottom" id="E38-CS-AXb"/>
+                                    <constraint firstAttribute="trailing" secondItem="ACk-s2-Ixg" secondAttribute="trailing" id="g5h-zJ-hkK"/>
+                                    <constraint firstItem="ACk-s2-Ixg" firstAttribute="top" secondItem="gwp-PI-U4x" secondAttribute="top" id="iDH-Ck-Bmw"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gwp-PI-U4x" firstAttribute="leading" secondItem="9OB-es-r2T" secondAttribute="leading" id="12B-Bb-ic2"/>
+                            <constraint firstItem="9OB-es-r2T" firstAttribute="trailing" secondItem="gwp-PI-U4x" secondAttribute="trailing" id="ToH-Ct-OWD"/>
+                            <constraint firstItem="gwp-PI-U4x" firstAttribute="top" secondItem="9OB-es-r2T" secondAttribute="top" id="Wzc-nh-OcY"/>
+                            <constraint firstItem="gwp-PI-U4x" firstAttribute="width" secondItem="hlU-is-gyX" secondAttribute="width" id="nYZ-DT-YJj"/>
+                            <constraint firstItem="9OB-es-r2T" firstAttribute="bottom" secondItem="gwp-PI-U4x" secondAttribute="bottom" id="yi5-Xk-eUG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9OB-es-r2T"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Tt-3J-gXQ">
+                        <barButtonItem key="leftBarButtonItem" image="xBtn" id="CkI-C9-d41">
+                            <connections>
+                                <action selector="xBtnAction:" destination="LM1-jf-fGu" id="5OO-48-39o"/>
+                                <segue destination="w1X-AW-UKe" kind="unwind" identifier="unwindToHome" unwindAction="unwindAction:" id="hrH-oJ-z15"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="1275"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQU-Xi-GPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="w1X-AW-UKe" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="-207.34632683658174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lDR-VJ-8ES">
+            <objects>
+                <navigationController storyboardIdentifier="InfoNav" automaticallyAdjustsScrollViewInsets="NO" id="to9-6Y-hE9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ab3-Ec-GTZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LM1-jf-fGu" kind="relationship" relationship="rootViewController" id="ryj-5c-8NL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Fj-ak-Bce" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="-207.34632683658174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="serviceInformationImg" width="375" height="1195"/>
+        <image name="xBtn" width="15" height="15"/>
+    </resources>
+</document>
