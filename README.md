@@ -23,7 +23,7 @@
 
 ## [ WorkFlow ]             
 
-![workflow](https://github.com/Choyoonyoung98/APPJAM2019_Refactoring/blob/master/DowaDog-1.png)
+![workflow](https://github.com/Choyoonyoung98/APPJAM2019_Refactoring/blob/master/WorkFlow.jpg)
 
 
 ## [ Develop Environment ]
