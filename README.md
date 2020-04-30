@@ -36,12 +36,9 @@
 
 1. Server
 - [Alamofire](https://github.com/Alamofire/Alamofire)
-- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
+- [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper)
 - [Kingfisher](https://github.com/onevcat/Kingfisher)
 
 2. Layout
-- [SnapKit](https://github.com/SnapKit/SnapKit)
-- [UITextView+Placeholder](https://github.com/devxoul/UITextView-Placeholder)
-- [ImageSlideshow](https://github.com/zvonicek/ImageSlideshow)
 - [SwiftyGifOrigin](https://github.com/swiftgif/SwiftGif)
 
